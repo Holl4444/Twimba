@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import { tweetsData } from './data/data.js';
+import { tweetData } from './utils/types.js';
 
 document.addEventListener('click', function (e) {
   if (!e.target) {
@@ -31,7 +32,7 @@ document.addEventListener('click', function (e) {
 
 function handleLikeClick(tweetId: string) {
   const targetTweetObj = tweetsData.filter(
-    (tweet) => tweet.uuid === tweetId
+    (tweet: tweetData) => tweet.uuid === tweetId
   )[0];
 
   if (!targetTweetObj.isLiked) {
@@ -45,7 +46,7 @@ function handleLikeClick(tweetId: string) {
 
 function handleRetweetClick(tweetId: string) {
   const targetTweetObj = tweetsData.filter(
-    (tweet) => tweet.uuid === tweetId
+    (tweet: tweetData) => tweet.uuid === tweetId
   )[0];
 
   if (!targetTweetObj.isRetweeted) {
@@ -62,7 +63,6 @@ function handleReplyClick(replyId: string) {
   document
     .querySelector(`#replies-${replyId}`)
     ?.classList.toggle('hidden');
-  console.log('function tried');
 }
 
 function handleTweetBtnClick() {
@@ -90,7 +90,7 @@ function handleTweetBtnClick() {
 function getFeedHtml() {
   let feedHtml = ``;
 
-  tweetsData.forEach(function (tweet) {
+  tweetsData.forEach(function (tweet: tweetData) {
     const likeIconClass = tweet.isLiked ? 'liked' : '';
     const retweetIconClass = tweet.isRetweeted ? 'retweeted' : '';
 

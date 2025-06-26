@@ -1,4 +1,6 @@
-export const tweetsData = [
+import { tweetData } from '../utils/types.js';
+
+export const tweetsData: tweetData[] = [
   {
     handle: `@TrollBot66756542 💎`,
     profilePic: `images/troll.jpg`,
