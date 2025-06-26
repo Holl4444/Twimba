@@ -18,8 +18,13 @@ document.addEventListener('click', function (e) {
   const target = e.target as HTMLElement;
   if (target.dataset && target.dataset.like) {
     console.log(target.dataset.like);
+    handleLikeClick(target.dataset.like);
   }
 });
+
+function handleLikeClick(tweetId: string) {
+  console.log(tweetId);
+}
 
 function getFeedHtml() {
   let feedHtml = ``;
