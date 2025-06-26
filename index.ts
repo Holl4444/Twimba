@@ -1,11 +1,24 @@
 import { tweetsData } from './data/data.js';
 
-const tweetInput = document.getElementById('tweet-input');
-const tweetBtn = document.getElementById('tweet-btn');
+const tweetInput =
+  document.querySelector<HTMLInputElement>('#tweet-input');
+const tweetBtn = document.querySelector<HTMLElement>('#tweet-btn');
 
-tweetBtn.addEventListener('click', () => {
-  console.log(tweetInput.value);
-  tweetInput.value = '';
+if (tweetBtn) {
+  tweetBtn.addEventListener('click', () => {
+    if (tweetInput && tweetInput.value) {
+      console.log(tweetInput.value);
+      tweetInput.value = '';
+    }
+  });
+}
+
+document.addEventListener('click', function (e) {
+  if (!e.target) return;
+  const target = e.target as HTMLElement;
+  if (target.dataset && target.dataset.like) {
+    console.log(target.dataset.like);
+  }
 });
 
 function getFeedHtml() {
@@ -41,8 +54,11 @@ function getFeedHtml() {
   return feedHtml;
 }
 
-function render(){
-document.getElementById('feed').innerHTML = getFeedHtml()
+function render() {
+  const feedElement = document.querySelector<HTMLElement>('#feed');
+  if (feedElement) {
+    feedElement.innerHTML = getFeedHtml();
+  }
 }
 
-render()
+render();
