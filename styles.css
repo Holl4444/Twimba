@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -7,128 +6,127 @@ body {
 
 /* typography and icons */
 
-h1 {
-  color: #0f8cdf;
-  margin-bottom: 0.63rem;
-  font-size: 1.25rem;
+h1{
+  color: #0F8CDF;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-i {
+i{
   font-size: 15px;
   cursor: pointer;
 }
 
-.fa-solid {
+.fa-solid{
   color: #999;
 }
 
-.liked {
+.liked{
   color: red;
 }
 
 .retweeted {
-  color: limegreen;
+color: limegreen;
 }
 
 /* layout */
 
-main,
-header {
+main, header{
   width: 290px;
   margin: 0 auto;
 }
 
-header {
-  padding-bottom: 1.56rem;
+header{
+  padding-bottom: 25px;
 }
 
 .tweet-input-area {
   display: flex;
   align-items: flex-start;
-  gap: 0.63rem;
+  gap: 10px;
 }
 
 /* textareas + btn */
 
-textarea {
+textarea{
   border: none;
-  padding: 0.63rem;
-  margin: 0 0 1.25rem 0;
+  resize: none;
+  padding: 10px;
+  margin: 0 0 20px 0;
   height: 60px;
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 30px;
-  resize: none;
 }
 
-button {
-  background-color: #1da1f2;
+button{
+  background-color: #1DA1F2;
   border: none;
   color: white;
-  padding: 0.63rem 19px;
-  border-radius: 1.25rem;
-  width: 100%;
+  padding: 10px 19px;
+  border-radius: 20px;
+  width: 100%; 
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 600;
 }
 
 /* tweet */
 
-.tweet {
+.tweet{
   border-top: 1px solid lightgray;
-  padding: 1.25rem 0 0 0;
+  padding: 20px 0 0 0;
   width: 100%;
   margin: 15px 0;
 }
 
-.tweet-inner {
+.tweet-inner{
   display: flex;
   align-items: flex-start;
-  gap: 0.63rem;
+  gap: 10px;
 }
 
-.tweet-details {
+.tweet-details{
   display: flex;
   font-size: 13px;
   justify-content: space-between;
   width: 160px;
 }
 
-.tweet-detail {
+.tweet-detail{
   display: flex;
   gap: 4px;
 }
 
-.tweet-reply {
+.tweet-reply{
   border-top: 1px solid lightgray;
-  padding: 1.25rem 0 0 0px;
-  margin: 0.63rem 0 0.63rem 40px;
+  padding: 20px 0 0 0px;
+  margin: 10px 0 10px 40px;
   width: 80%;
 }
 
-.handle {
+.handle{
   font-size: 12px;
   font-weight: 500;
   color: #555;
   margin-top: 0;
 }
 
-.tweet-text {
+.tweet-text{
   width: 207px;
   font-size: 14px;
-  line-height: 1.25rem;
+  line-height: 20px;
 }
 
 /* images */
 
-.profile-pic {
+.profile-pic{
   border: 1px solid lightgray;
   border-radius: 50%;
   width: 48px;
 }
 
 /* utility */
-.hidden {
+.hidden{
   display: none;
 }
