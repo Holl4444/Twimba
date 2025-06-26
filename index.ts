@@ -2,16 +2,6 @@ import { tweetsData } from './data/data.js';
 
 const tweetInput =
   document.querySelector<HTMLInputElement>('#tweet-input');
-const tweetBtn = document.querySelector<HTMLElement>('#tweet-btn');
-
-if (tweetBtn) {
-  tweetBtn.addEventListener('click', () => {
-    if (tweetInput && tweetInput.value) {
-      console.log(tweetInput.value);
-      tweetInput.value = '';
-    }
-  });
-}
 
 document.addEventListener('click', function (e) {
   if (!e.target) {
@@ -34,6 +24,9 @@ document.addEventListener('click', function (e) {
     if (target.dataset.reply) {
       handleReplyClick(target.dataset.reply);
       return;
+    }
+    if (target.id && target.id  === 'tweet-btn') {
+      handleTweetBtnClick();
     }
   }
 });
@@ -72,6 +65,13 @@ function handleReplyClick(replyId: string) {
     .querySelector(`#replies-${replyId}`)
     ?.classList.toggle('hidden');
   console.log('function tried');
+}
+
+function handleTweetBtnClick() {
+  if (tweetInput && tweetInput.value) {
+    console.log(tweetInput.value);
+    tweetInput.value = '';
+  }
 }
 
 function getFeedHtml() {
