@@ -9,8 +9,8 @@ body {
 
 h1 {
   color: #0f8cdf;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 0.63rem;
+  font-size: 1.25rem;
 }
 
 i {
@@ -35,24 +35,24 @@ header {
 }
 
 header {
-  padding-bottom: 25px;
+  padding-bottom: 1.56rem;
 }
 
 .tweet-input-area {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 0.63rem;
 }
 
 /* textareas + btn */
 
 textarea {
   border: none;
-  padding: 10px;
-  margin: 0 0 20px 0;
+  padding: 0.63rem;
+  margin: 0 0 1.25rem 0;
   height: 60px;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 30px;
   resize: none;
 }
@@ -61,11 +61,11 @@ button {
   background-color: #1da1f2;
   border: none;
   color: white;
-  padding: 10px 19px;
-  border-radius: 20px;
+  padding: 0.63rem 19px;
+  border-radius: 1.25rem;
   width: 100%;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -73,7 +73,7 @@ button {
 
 .tweet {
   border-top: 1px solid lightgray;
-  padding: 20px 0 0 0;
+  padding: 1.25rem 0 0 0;
   width: 100%;
   margin: 15px 0;
 }
@@ -81,7 +81,7 @@ button {
 .tweet-inner {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 0.63rem;
 }
 
 .tweet-details {
@@ -98,8 +98,8 @@ button {
 
 .tweet-reply {
   border-top: 1px solid lightgray;
-  padding: 20px 0 0 0px;
-  margin: 10px 0 10px 40px;
+  padding: 1.25rem 0 0 0px;
+  margin: 0.63rem 0 0.63rem 40px;
   width: 80%;
 }
 
@@ -113,7 +113,7 @@ button {
 .tweet-text {
   width: 207px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 
 /* images */
